@@ -1,0 +1,49 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/kuka/youbot/protos/Youbot.proto"
+IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/drinks/protos/WaterBottle.proto"
+IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/kitchen/utensils/protos/Knife.proto"
+IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/kitchen/utensils/protos/Spoon.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/UnevenTerrain.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.05512920259735343 0.09294171270448712 0.9941441590939095 1.0759606490900773
+  position -3.76416506857057 -9.391471730862824 2.6902621454749354
+}
+TexturedBackground {
+}
+DEF light TexturedBackgroundLight {
+  luminosity 0.9361726762136124
+}
+Youbot {
+  controller "shri_controller"
+  supervisor TRUE
+  bodySlot [
+    Camera {
+      translation 0.3 0 0.6
+      rotation 0 1 0 0.3927003061004253
+      fieldOfView 1.57
+      width 1240
+      height 1024
+    }
+  ]
+}
+WaterBottle {
+  translation 1.5 0 0
+}
+Knife {
+  translation 1 -1 -0.02
+}
+Spoon {
+  translation 1 1 0.023
+}
+DEF fog Fog {
+  visibilityRange 5.433214314374659
+}
+UnevenTerrain {
+  translation 0 0 -3.2
+}
